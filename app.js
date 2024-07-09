@@ -1,14 +1,14 @@
 import express from "express"
 import dotenv from "dotenv"
-import {productRoutes} from "./routes/productRoutes.js";
 import {connectDb} from "./db/DbConnect.js"
+import { hotelRoutes } from "./routes/hotelRoutes.js";
 
 dotenv.config()
 const PORT = process.env.PORT;
 
 const app = express();
 
-app.use("/api/products", productRoutes)
+app.use("/api/hotels", hotelRoutes)
 
 app.get("/", (req, res, next) => {
     res.send({message: "ok"})
