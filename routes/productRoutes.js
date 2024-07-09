@@ -1,6 +1,6 @@
 import { Router } from "express";
 import {getAll} from "../controllers/productControllers.js"
 
-export default productRoutes = Router()
+export const productRoutes = Router();
 
 productRoutes.get('/', getAll )
